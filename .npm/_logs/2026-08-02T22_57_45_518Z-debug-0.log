@@ -1,0 +1,504 @@
+0 verbose cli /usr/bin/node /usr/bin/npm
+1 info using npm@10.8.2
+2 info using node@v20.20.2
+3 silly config load:file:/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/meechain/.npmrc
+5 silly config load:file:/usr/etc/npmrc
+6 verbose title npm audit fix
+7 verbose argv "audit" "fix"
+8 verbose logfile logs-max:10 dir:/home/meechain/.npm/_logs/2026-08-02T22_57_45_518Z-
+9 verbose logfile /home/meechain/.npm/_logs/2026-08-02T22_57_45_518Z-debug-0.log
+10 silly packumentCache heap:480247808 maxSize:120061952 maxEntrySize:60030976
+11 silly logfile done cleaning log files
+12 silly audit bulk request {
+12 silly audit   '@ethersproject/abi': [ '5.8.0' ],
+12 silly audit   '@ethersproject/abstract-provider': [ '5.8.0' ],
+12 silly audit   '@ethersproject/abstract-signer': [ '5.8.0' ],
+12 silly audit   '@ethersproject/address': [ '5.8.0' ],
+12 silly audit   '@ethersproject/base64': [ '5.8.0' ],
+12 silly audit   '@ethersproject/basex': [ '5.8.0' ],
+12 silly audit   '@ethersproject/bignumber': [ '5.8.0' ],
+12 silly audit   '@ethersproject/bytes': [ '5.8.0' ],
+12 silly audit   '@ethersproject/constants': [ '5.8.0' ],
+12 silly audit   '@ethersproject/contracts': [ '5.8.0' ],
+12 silly audit   '@ethersproject/hash': [ '5.8.0' ],
+12 silly audit   '@ethersproject/hdnode': [ '5.8.0' ],
+12 silly audit   '@ethersproject/json-wallets': [ '5.8.0' ],
+12 silly audit   '@ethersproject/keccak256': [ '5.8.0' ],
+12 silly audit   '@ethersproject/logger': [ '5.8.0' ],
+12 silly audit   '@ethersproject/networks': [ '5.8.0' ],
+12 silly audit   '@ethersproject/pbkdf2': [ '5.8.0' ],
+12 silly audit   '@ethersproject/properties': [ '5.8.0' ],
+12 silly audit   '@ethersproject/providers': [ '5.8.0' ],
+12 silly audit   '@ethersproject/random': [ '5.8.0' ],
+12 silly audit   '@ethersproject/rlp': [ '5.8.0' ],
+12 silly audit   '@ethersproject/sha2': [ '5.8.0' ],
+12 silly audit   '@ethersproject/signing-key': [ '5.8.0' ],
+12 silly audit   '@ethersproject/solidity': [ '5.8.0' ],
+12 silly audit   '@ethersproject/strings': [ '5.8.0' ],
+12 silly audit   '@ethersproject/transactions': [ '5.8.0' ],
+12 silly audit   '@ethersproject/units': [ '5.8.0' ],
+12 silly audit   '@ethersproject/wallet': [ '5.8.0' ],
+12 silly audit   '@ethersproject/web': [ '5.8.0' ],
+12 silly audit   '@ethersproject/wordlists': [ '5.8.0' ],
+12 silly audit   accepts: [ '2.0.0' ],
+12 silly audit   'aes-js': [ '3.0.0' ],
+12 silly audit   bech32: [ '1.1.4' ],
+12 silly audit   'bn.js': [ '5.2.5', '4.12.5' ],
+12 silly audit   'body-parser': [ '2.3.0' ],
+12 silly audit   'content-type': [ '2.0.0', '1.0.5' ],
+12 silly audit   brorand: [ '1.1.0' ],
+12 silly audit   bytes: [ '3.1.2' ],
+12 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+12 silly audit   'call-bound': [ '1.0.4' ],
+12 silly audit   'content-disposition': [ '1.1.0' ],
+12 silly audit   cookie: [ '0.7.2' ],
+12 silly audit   'cookie-signature': [ '1.2.2' ],
+12 silly audit   cors: [ '2.8.6' ],
+12 silly audit   debug: [ '4.4.3' ],
+12 silly audit   depd: [ '2.0.0' ],
+12 silly audit   'dunder-proto': [ '1.0.1' ],
+12 silly audit   'ee-first': [ '1.1.1' ],
+12 silly audit   elliptic: [ '6.6.1' ],
+12 silly audit   encodeurl: [ '2.0.0' ],
+12 silly audit   'es-define-property': [ '1.0.1' ],
+12 silly audit   'es-errors': [ '1.3.0' ],
+12 silly audit   'es-object-atoms': [ '1.1.2' ],
+12 silly audit   'escape-html': [ '1.0.3' ],
+12 silly audit   etag: [ '1.8.1' ],
+12 silly audit   ethers: [ '5.8.0' ],
+12 silly audit   express: [ '5.2.1' ],
+12 silly audit   finalhandler: [ '2.1.1' ],
+12 silly audit   forwarded: [ '0.2.0' ],
+12 silly audit   fresh: [ '2.0.0' ],
+12 silly audit   'function-bind': [ '1.1.2' ],
+12 silly audit   'get-intrinsic': [ '1.3.0' ],
+12 silly audit   'get-proto': [ '1.0.1' ],
+12 silly audit   gopd: [ '1.2.0' ],
+12 silly audit   'has-symbols': [ '1.1.0' ],
+12 silly audit   'hash.js': [ '1.1.7' ],
+12 silly audit   hasown: [ '2.0.4' ],
+12 silly audit   'hmac-drbg': [ '1.0.1' ],
+12 silly audit   'http-errors': [ '2.0.1' ],
+12 silly audit   'iconv-lite': [ '0.7.3' ],
+12 silly audit   inherits: [ '2.0.4' ],
+12 silly audit   'ipaddr.js': [ '1.9.1' ],
+12 silly audit   'is-promise': [ '4.0.0' ],
+12 silly audit   'js-sha3': [ '0.8.0' ],
+12 silly audit   'math-intrinsics': [ '1.1.0' ],
+12 silly audit   'media-typer': [ '1.1.1' ],
+12 silly audit   'merge-descriptors': [ '2.0.0' ],
+12 silly audit   'mime-db': [ '1.54.0' ],
+12 silly audit   'mime-types': [ '3.0.2' ],
+12 silly audit   'minimalistic-assert': [ '1.0.1' ],
+12 silly audit   'minimalistic-crypto-utils': [ '1.0.1' ],
+12 silly audit   ms: [ '2.1.3' ],
+12 silly audit   negotiator: [ '1.0.0' ],
+12 silly audit   'node-cron': [ '4.6.0' ],
+12 silly audit   'object-assign': [ '4.1.1' ],
+12 silly audit   'object-inspect': [ '1.13.4' ],
+12 silly audit   'on-finished': [ '2.4.1' ],
+12 silly audit   once: [ '1.4.0' ],
+12 silly audit   parseurl: [ '1.3.3' ],
+12 silly audit   'path-to-regexp': [ '8.4.2' ],
+12 silly audit   'proxy-addr': [ '2.0.7' ],
+12 silly audit   qs: [ '6.15.3' ],
+12 silly audit   'range-parser': [ '1.3.0' ],
+12 silly audit   'raw-body': [ '3.0.2' ],
+12 silly audit   router: [ '2.2.0' ],
+12 silly audit   'safer-buffer': [ '2.1.2' ],
+12 silly audit   'scrypt-js': [ '3.0.1' ],
+12 silly audit   send: [ '1.2.1' ],
+12 silly audit   'serve-static': [ '2.2.1' ],
+12 silly audit   setprototypeof: [ '1.2.0' ],
+12 silly audit   'side-channel': [ '1.1.1' ],
+12 silly audit   'side-channel-list': [ '1.0.1' ],
+12 silly audit   'side-channel-map': [ '1.0.1' ],
+12 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+12 silly audit   statuses: [ '2.0.2' ],
+12 silly audit   toidentifier: [ '1.0.1' ],
+12 silly audit   'type-is': [ '2.1.0' ],
+12 silly audit   unpipe: [ '1.0.0' ],
+12 silly audit   vary: [ '1.1.2' ],
+12 silly audit   wrappy: [ '1.0.2' ],
+12 silly audit   ws: [ '8.18.0' ]
+12 silly audit }
+13 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 107ms
+14 silly audit report {
+14 silly audit report   elliptic: [
+14 silly audit report     {
+14 silly audit report       id: 1112030,
+14 silly audit report       url: 'https://github.com/advisories/GHSA-848j-6mx2-7j84',
+14 silly audit report       title: 'Elliptic Uses a Cryptographic Primitive with a Risky Implementation',
+14 silly audit report       severity: 'low',
+14 silly audit report       vulnerable_versions: '<=6.6.1',
+14 silly audit report       cwe: [Array],
+14 silly audit report       cvss: [Object]
+14 silly audit report     }
+14 silly audit report   ],
+14 silly audit report   ws: [
+14 silly audit report     {
+14 silly audit report       id: 1119108,
+14 silly audit report       url: 'https://github.com/advisories/GHSA-58qx-3vcg-4xpx',
+14 silly audit report       title: 'ws: Uninitialized memory disclosure',
+14 silly audit report       severity: 'moderate',
+14 silly audit report       vulnerable_versions: '>=8.0.0 <8.20.1',
+14 silly audit report       cwe: [Array],
+14 silly audit report       cvss: [Object]
+14 silly audit report     },
+14 silly audit report     {
+14 silly audit report       id: 1123259,
+14 silly audit report       url: 'https://github.com/advisories/GHSA-96hv-2xvq-fx4p',
+14 silly audit report       title: 'ws: Memory exhaustion DoS from tiny fragments and data chunks',
+14 silly audit report       severity: 'high',
+14 silly audit report       vulnerable_versions: '>=8.0.0 <8.21.0',
+14 silly audit report       cwe: [Array],
+14 silly audit report       cvss: [Object]
+14 silly audit report     }
+14 silly audit report   ]
+14 silly audit report }
+15 silly packumentCache corgi:https://registry.npmjs.org/elliptic cache-miss
+16 silly packumentCache corgi:https://registry.npmjs.org/ws cache-miss
+17 http fetch GET 200 https://registry.npmjs.org/ws 12ms (cache hit)
+18 silly packumentCache corgi:https://registry.npmjs.org/ws set size:205716 disposed:false
+19 http fetch GET 200 https://registry.npmjs.org/elliptic 17ms (cache hit)
+20 silly packumentCache corgi:https://registry.npmjs.org/elliptic set size:67039 disposed:false
+21 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fsigning-key cache-miss
+22 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fsigning-key 3ms (cache hit)
+23 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fsigning-key set size:74077 disposed:false
+24 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fproviders cache-miss
+25 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fproviders 4ms (cache hit)
+26 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fproviders set size:250323 disposed:false
+27 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fhdnode cache-miss
+28 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2ftransactions cache-miss
+29 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fwallet cache-miss
+30 silly packumentCache corgi:https://registry.npmjs.org/ethers cache-miss
+31 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2ftransactions 11ms (cache hit)
+32 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2ftransactions set size:85329 disposed:false
+33 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fhdnode 12ms (cache hit)
+34 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fhdnode set size:89660 disposed:false
+35 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fwallet 12ms (cache hit)
+36 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fwallet set size:113819 disposed:false
+37 http fetch GET 200 https://registry.npmjs.org/ethers 15ms (cache hit)
+38 silly packumentCache corgi:https://registry.npmjs.org/ethers set size:695380 disposed:false
+39 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fabstract-provider cache-miss
+40 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fcontracts cache-miss
+41 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fjson-wallets cache-miss
+42 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fabstract-provider 24ms (cache hit)
+43 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fabstract-provider set size:86707 disposed:false
+44 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fcontracts 24ms (cache hit)
+45 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fcontracts set size:121518 disposed:false
+46 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fjson-wallets 24ms (cache hit)
+47 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fjson-wallets set size:84294 disposed:false
+48 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fabstract-signer cache-miss
+49 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fabstract-signer 13ms (cache hit)
+50 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fabstract-signer set size:92575 disposed:false
+51 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fhash cache-miss
+52 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fhash 24ms (cache hit)
+53 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fhash set size:81868 disposed:false
+54 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fabi cache-miss
+55 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fwordlists cache-miss
+56 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fabi 7ms (cache hit)
+57 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fabi set size:136312 disposed:false
+58 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fwordlists 7ms (cache hit)
+59 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fwordlists set size:73791 disposed:false
+60 silly idealTree buildDeps
+61 silly fetch manifest ethers@^5.8.0
+62 silly packumentCache full:https://registry.npmjs.org/ethers cache-miss
+63 http fetch GET 200 https://registry.npmjs.org/ethers 25ms (cache hit)
+64 silly packumentCache full:https://registry.npmjs.org/ethers set size:1385088 disposed:false
+65 silly placeDep ROOT ethers@5.8.0 KEEP for: meechain@1.0.0 want: ^5.8.0
+66 silly fetch manifest @ethersproject/hash@^5.8.0
+67 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fhash cache-miss
+68 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fhash 4ms (cache hit)
+69 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fhash set size:145508 disposed:false
+70 silly placeDep ROOT @ethersproject/hash@5.8.0 KEEP for: @ethersproject/abi@5.8.0 want: ^5.8.0
+71 silly fetch manifest @ethersproject/transactions@^5.8.0
+72 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2ftransactions cache-miss
+73 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2ftransactions 4ms (cache hit)
+74 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2ftransactions set size:132568 disposed:false
+75 silly placeDep ROOT @ethersproject/transactions@5.8.0 KEEP for: @ethersproject/abstract-provider@5.8.0 want: ^5.8.0
+76 silly fetch manifest @ethersproject/abstract-provider@^5.8.0
+77 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fabstract-provider cache-miss
+78 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fabstract-provider 2ms (cache hit)
+79 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fabstract-provider set size:138358 disposed:false
+80 silly placeDep ROOT @ethersproject/abstract-provider@5.8.0 KEEP for: @ethersproject/abstract-signer@5.8.0 want: ^5.8.0
+81 silly fetch manifest @ethersproject/abi@^5.8.0
+82 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fabi cache-miss
+83 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fabi 3ms (cache hit)
+84 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fabi set size:210248 disposed:false
+85 silly fetch manifest @ethersproject/abstract-signer@^5.8.0
+86 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fabstract-signer cache-miss
+87 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fabstract-signer 5ms (cache hit)
+88 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fabstract-signer set size:147609 disposed:false
+89 silly placeDep ROOT @ethersproject/abi@5.8.0 KEEP for: @ethersproject/contracts@5.8.0 want: ^5.8.0
+90 silly placeDep ROOT @ethersproject/abstract-provider@5.8.0 KEEP for: @ethersproject/contracts@5.8.0 want: ^5.8.0
+91 silly placeDep ROOT @ethersproject/abstract-signer@5.8.0 KEEP for: @ethersproject/contracts@5.8.0 want: ^5.8.0
+92 silly placeDep ROOT @ethersproject/transactions@5.8.0 KEEP for: @ethersproject/contracts@5.8.0 want: ^5.8.0
+93 silly placeDep ROOT @ethersproject/abstract-signer@5.8.0 KEEP for: @ethersproject/hash@5.8.0 want: ^5.8.0
+94 silly fetch manifest @ethersproject/signing-key@^5.8.0
+95 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fsigning-key cache-miss
+96 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fsigning-key 3ms (cache hit)
+97 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fsigning-key set size:120718 disposed:false
+98 silly fetch manifest @ethersproject/wordlists@^5.8.0
+99 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fwordlists cache-miss
+100 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fwordlists 2ms (cache hit)
+101 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fwordlists set size:120160 disposed:false
+102 silly placeDep ROOT @ethersproject/abstract-signer@5.8.0 KEEP for: @ethersproject/hdnode@5.8.0 want: ^5.8.0
+103 silly placeDep ROOT @ethersproject/signing-key@5.8.0 KEEP for: @ethersproject/hdnode@5.8.0 want: ^5.8.0
+104 silly placeDep ROOT @ethersproject/transactions@5.8.0 KEEP for: @ethersproject/hdnode@5.8.0 want: ^5.8.0
+105 silly placeDep ROOT @ethersproject/wordlists@5.8.0 KEEP for: @ethersproject/hdnode@5.8.0 want: ^5.8.0
+106 silly fetch manifest @ethersproject/hdnode@^5.8.0
+107 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fhdnode cache-miss
+108 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fhdnode 3ms (cache hit)
+109 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fhdnode set size:135086 disposed:false
+110 silly placeDep ROOT @ethersproject/abstract-signer@5.8.0 KEEP for: @ethersproject/json-wallets@5.8.0 want: ^5.8.0
+111 silly placeDep ROOT @ethersproject/hdnode@5.8.0 KEEP for: @ethersproject/json-wallets@5.8.0 want: ^5.8.0
+112 silly placeDep ROOT @ethersproject/transactions@5.8.0 KEEP for: @ethersproject/json-wallets@5.8.0 want: ^5.8.0
+113 silly fetch manifest ws@8.18.0
+114 silly packumentCache full:https://registry.npmjs.org/ws cache-miss
+115 http fetch GET 200 https://registry.npmjs.org/ws 11ms (cache hit)
+116 silly packumentCache full:https://registry.npmjs.org/ws set size:426754 disposed:false
+117 silly fetch manifest bufferutil@^4.0.1
+118 silly packumentCache full:https://registry.npmjs.org/bufferutil cache-miss
+119 http fetch GET 200 https://registry.npmjs.org/bufferutil 21ms (cache hit)
+120 silly packumentCache full:https://registry.npmjs.org/bufferutil set size:52668 disposed:false
+121 silly fetch manifest utf-8-validate@>=5.0.2
+122 silly packumentCache full:https://registry.npmjs.org/utf-8-validate cache-miss
+123 http fetch GET 200 https://registry.npmjs.org/utf-8-validate 2ms (cache hit)
+124 silly packumentCache full:https://registry.npmjs.org/utf-8-validate set size:77012 disposed:false
+125 silly placeDep ROOT @ethersproject/abstract-provider@5.8.0 KEEP for: @ethersproject/providers@5.8.0 want: ^5.8.0
+126 silly placeDep ROOT @ethersproject/abstract-signer@5.8.0 KEEP for: @ethersproject/providers@5.8.0 want: ^5.8.0
+127 silly placeDep ROOT @ethersproject/hash@5.8.0 KEEP for: @ethersproject/providers@5.8.0 want: ^5.8.0
+128 silly placeDep ROOT @ethersproject/transactions@5.8.0 KEEP for: @ethersproject/providers@5.8.0 want: ^5.8.0
+129 silly placeDep ROOT ws@8.18.0 KEEP for: @ethersproject/providers@5.8.0 want: 8.18.0
+130 silly fetch manifest elliptic@6.6.1
+131 silly packumentCache full:https://registry.npmjs.org/elliptic cache-miss
+132 http fetch GET 200 https://registry.npmjs.org/elliptic 3ms (cache hit)
+133 silly packumentCache full:https://registry.npmjs.org/elliptic set size:149761 disposed:false
+134 silly placeDep ROOT elliptic@6.6.1 KEEP for: @ethersproject/signing-key@5.8.0 want: 6.6.1
+135 silly placeDep ROOT @ethersproject/signing-key@5.8.0 KEEP for: @ethersproject/transactions@5.8.0 want: ^5.8.0
+136 silly fetch manifest @ethersproject/json-wallets@^5.8.0
+137 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fjson-wallets cache-miss
+138 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fjson-wallets 3ms (cache hit)
+139 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fjson-wallets set size:128885 disposed:false
+140 silly placeDep ROOT @ethersproject/abstract-provider@5.8.0 KEEP for: @ethersproject/wallet@5.8.0 want: ^5.8.0
+141 silly placeDep ROOT @ethersproject/abstract-signer@5.8.0 KEEP for: @ethersproject/wallet@5.8.0 want: ^5.8.0
+142 silly placeDep ROOT @ethersproject/hash@5.8.0 KEEP for: @ethersproject/wallet@5.8.0 want: ^5.8.0
+143 silly placeDep ROOT @ethersproject/hdnode@5.8.0 KEEP for: @ethersproject/wallet@5.8.0 want: ^5.8.0
+144 silly placeDep ROOT @ethersproject/json-wallets@5.8.0 KEEP for: @ethersproject/wallet@5.8.0 want: ^5.8.0
+145 silly placeDep ROOT @ethersproject/signing-key@5.8.0 KEEP for: @ethersproject/wallet@5.8.0 want: ^5.8.0
+146 silly placeDep ROOT @ethersproject/transactions@5.8.0 KEEP for: @ethersproject/wallet@5.8.0 want: ^5.8.0
+147 silly placeDep ROOT @ethersproject/wordlists@5.8.0 KEEP for: @ethersproject/wallet@5.8.0 want: ^5.8.0
+148 silly placeDep ROOT @ethersproject/hash@5.8.0 KEEP for: @ethersproject/wordlists@5.8.0 want: ^5.8.0
+149 silly fetch manifest @ethersproject/abi@5.8.0
+150 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fabi cache-hit
+151 silly fetch manifest @ethersproject/abstract-provider@5.8.0
+152 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fabstract-provider cache-hit
+153 silly fetch manifest @ethersproject/abstract-signer@5.8.0
+154 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fabstract-signer cache-hit
+155 silly fetch manifest @ethersproject/contracts@5.8.0
+156 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fcontracts cache-miss
+157 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fcontracts 2ms (cache hit)
+158 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fcontracts set size:184288 disposed:false
+159 silly fetch manifest @ethersproject/hash@5.8.0
+160 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fhash cache-hit
+161 silly fetch manifest @ethersproject/hdnode@5.8.0
+162 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fhdnode cache-hit
+163 silly fetch manifest @ethersproject/json-wallets@5.8.0
+164 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fjson-wallets cache-hit
+165 silly fetch manifest @ethersproject/providers@5.8.0
+166 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fproviders cache-miss
+167 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fproviders 3ms (cache hit)
+168 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fproviders set size:461121 disposed:false
+169 silly fetch manifest @ethersproject/signing-key@5.8.0
+170 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fsigning-key cache-hit
+171 silly fetch manifest @ethersproject/transactions@5.8.0
+172 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2ftransactions cache-hit
+173 silly fetch manifest @ethersproject/wallet@5.8.0
+174 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fwallet cache-miss
+175 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fwallet 4ms (cache hit)
+176 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fwallet set size:190494 disposed:false
+177 silly fetch manifest @ethersproject/wordlists@5.8.0
+178 silly packumentCache full:https://registry.npmjs.org/@ethersproject%2fwordlists cache-hit
+179 silly placeDep ROOT @ethersproject/abi@5.8.0 KEEP for: ethers@5.8.0 want: 5.8.0
+180 silly placeDep ROOT @ethersproject/abstract-provider@5.8.0 KEEP for: ethers@5.8.0 want: 5.8.0
+181 silly placeDep ROOT @ethersproject/abstract-signer@5.8.0 KEEP for: ethers@5.8.0 want: 5.8.0
+182 silly placeDep ROOT @ethersproject/contracts@5.8.0 KEEP for: ethers@5.8.0 want: 5.8.0
+183 silly placeDep ROOT @ethersproject/hash@5.8.0 KEEP for: ethers@5.8.0 want: 5.8.0
+184 silly placeDep ROOT @ethersproject/hdnode@5.8.0 KEEP for: ethers@5.8.0 want: 5.8.0
+185 silly placeDep ROOT @ethersproject/json-wallets@5.8.0 KEEP for: ethers@5.8.0 want: 5.8.0
+186 silly placeDep ROOT @ethersproject/providers@5.8.0 KEEP for: ethers@5.8.0 want: 5.8.0
+187 silly placeDep ROOT @ethersproject/signing-key@5.8.0 KEEP for: ethers@5.8.0 want: 5.8.0
+188 silly placeDep ROOT @ethersproject/transactions@5.8.0 KEEP for: ethers@5.8.0 want: 5.8.0
+189 silly placeDep ROOT @ethersproject/wallet@5.8.0 KEEP for: ethers@5.8.0 want: 5.8.0
+190 silly placeDep ROOT @ethersproject/wordlists@5.8.0 KEEP for: ethers@5.8.0 want: 5.8.0
+191 silly reify moves {}
+192 silly audit bulk request {
+192 silly audit   '@ethersproject/abi': [ '5.8.0' ],
+192 silly audit   '@ethersproject/abstract-provider': [ '5.8.0' ],
+192 silly audit   '@ethersproject/abstract-signer': [ '5.8.0' ],
+192 silly audit   '@ethersproject/address': [ '5.8.0' ],
+192 silly audit   '@ethersproject/base64': [ '5.8.0' ],
+192 silly audit   '@ethersproject/basex': [ '5.8.0' ],
+192 silly audit   '@ethersproject/bignumber': [ '5.8.0' ],
+192 silly audit   '@ethersproject/bytes': [ '5.8.0' ],
+192 silly audit   '@ethersproject/constants': [ '5.8.0' ],
+192 silly audit   '@ethersproject/contracts': [ '5.8.0' ],
+192 silly audit   '@ethersproject/hash': [ '5.8.0' ],
+192 silly audit   '@ethersproject/hdnode': [ '5.8.0' ],
+192 silly audit   '@ethersproject/json-wallets': [ '5.8.0' ],
+192 silly audit   '@ethersproject/keccak256': [ '5.8.0' ],
+192 silly audit   '@ethersproject/logger': [ '5.8.0' ],
+192 silly audit   '@ethersproject/networks': [ '5.8.0' ],
+192 silly audit   '@ethersproject/pbkdf2': [ '5.8.0' ],
+192 silly audit   '@ethersproject/properties': [ '5.8.0' ],
+192 silly audit   '@ethersproject/providers': [ '5.8.0' ],
+192 silly audit   '@ethersproject/random': [ '5.8.0' ],
+192 silly audit   '@ethersproject/rlp': [ '5.8.0' ],
+192 silly audit   '@ethersproject/sha2': [ '5.8.0' ],
+192 silly audit   '@ethersproject/signing-key': [ '5.8.0' ],
+192 silly audit   '@ethersproject/solidity': [ '5.8.0' ],
+192 silly audit   '@ethersproject/strings': [ '5.8.0' ],
+192 silly audit   '@ethersproject/transactions': [ '5.8.0' ],
+192 silly audit   '@ethersproject/units': [ '5.8.0' ],
+192 silly audit   '@ethersproject/wallet': [ '5.8.0' ],
+192 silly audit   '@ethersproject/web': [ '5.8.0' ],
+192 silly audit   '@ethersproject/wordlists': [ '5.8.0' ],
+192 silly audit   accepts: [ '2.0.0' ],
+192 silly audit   'aes-js': [ '3.0.0' ],
+192 silly audit   bech32: [ '1.1.4' ],
+192 silly audit   'bn.js': [ '5.2.5', '4.12.5' ],
+192 silly audit   'body-parser': [ '2.3.0' ],
+192 silly audit   'content-type': [ '2.0.0', '1.0.5' ],
+192 silly audit   brorand: [ '1.1.0' ],
+192 silly audit   bytes: [ '3.1.2' ],
+192 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+192 silly audit   'call-bound': [ '1.0.4' ],
+192 silly audit   'content-disposition': [ '1.1.0' ],
+192 silly audit   cookie: [ '0.7.2' ],
+192 silly audit   'cookie-signature': [ '1.2.2' ],
+192 silly audit   cors: [ '2.8.6' ],
+192 silly audit   debug: [ '4.4.3' ],
+192 silly audit   depd: [ '2.0.0' ],
+192 silly audit   'dunder-proto': [ '1.0.1' ],
+192 silly audit   'ee-first': [ '1.1.1' ],
+192 silly audit   elliptic: [ '6.6.1' ],
+192 silly audit   encodeurl: [ '2.0.0' ],
+192 silly audit   'es-define-property': [ '1.0.1' ],
+192 silly audit   'es-errors': [ '1.3.0' ],
+192 silly audit   'es-object-atoms': [ '1.1.2' ],
+192 silly audit   'escape-html': [ '1.0.3' ],
+192 silly audit   etag: [ '1.8.1' ],
+192 silly audit   ethers: [ '5.8.0' ],
+192 silly audit   express: [ '5.2.1' ],
+192 silly audit   finalhandler: [ '2.1.1' ],
+192 silly audit   forwarded: [ '0.2.0' ],
+192 silly audit   fresh: [ '2.0.0' ],
+192 silly audit   'function-bind': [ '1.1.2' ],
+192 silly audit   'get-intrinsic': [ '1.3.0' ],
+192 silly audit   'get-proto': [ '1.0.1' ],
+192 silly audit   gopd: [ '1.2.0' ],
+192 silly audit   'has-symbols': [ '1.1.0' ],
+192 silly audit   'hash.js': [ '1.1.7' ],
+192 silly audit   hasown: [ '2.0.4' ],
+192 silly audit   'hmac-drbg': [ '1.0.1' ],
+192 silly audit   'http-errors': [ '2.0.1' ],
+192 silly audit   'iconv-lite': [ '0.7.3' ],
+192 silly audit   inherits: [ '2.0.4' ],
+192 silly audit   'ipaddr.js': [ '1.9.1' ],
+192 silly audit   'is-promise': [ '4.0.0' ],
+192 silly audit   'js-sha3': [ '0.8.0' ],
+192 silly audit   'math-intrinsics': [ '1.1.0' ],
+192 silly audit   'media-typer': [ '1.1.1' ],
+192 silly audit   'merge-descriptors': [ '2.0.0' ],
+192 silly audit   'mime-db': [ '1.54.0' ],
+192 silly audit   'mime-types': [ '3.0.2' ],
+192 silly audit   'minimalistic-assert': [ '1.0.1' ],
+192 silly audit   'minimalistic-crypto-utils': [ '1.0.1' ],
+192 silly audit   ms: [ '2.1.3' ],
+192 silly audit   negotiator: [ '1.0.0' ],
+192 silly audit   'node-cron': [ '4.6.0' ],
+192 silly audit   'object-assign': [ '4.1.1' ],
+192 silly audit   'object-inspect': [ '1.13.4' ],
+192 silly audit   'on-finished': [ '2.4.1' ],
+192 silly audit   once: [ '1.4.0' ],
+192 silly audit   parseurl: [ '1.3.3' ],
+192 silly audit   'path-to-regexp': [ '8.4.2' ],
+192 silly audit   'proxy-addr': [ '2.0.7' ],
+192 silly audit   qs: [ '6.15.3' ],
+192 silly audit   'range-parser': [ '1.3.0' ],
+192 silly audit   'raw-body': [ '3.0.2' ],
+192 silly audit   router: [ '2.2.0' ],
+192 silly audit   'safer-buffer': [ '2.1.2' ],
+192 silly audit   'scrypt-js': [ '3.0.1' ],
+192 silly audit   send: [ '1.2.1' ],
+192 silly audit   'serve-static': [ '2.2.1' ],
+192 silly audit   setprototypeof: [ '1.2.0' ],
+192 silly audit   'side-channel': [ '1.1.1' ],
+192 silly audit   'side-channel-list': [ '1.0.1' ],
+192 silly audit   'side-channel-map': [ '1.0.1' ],
+192 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+192 silly audit   statuses: [ '2.0.2' ],
+192 silly audit   toidentifier: [ '1.0.1' ],
+192 silly audit   'type-is': [ '2.1.0' ],
+192 silly audit   unpipe: [ '1.0.0' ],
+192 silly audit   vary: [ '1.1.2' ],
+192 silly audit   wrappy: [ '1.0.2' ],
+192 silly audit   ws: [ '8.18.0' ]
+192 silly audit }
+193 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 74ms
+194 silly audit report {
+194 silly audit report   elliptic: [
+194 silly audit report     {
+194 silly audit report       id: 1112030,
+194 silly audit report       url: 'https://github.com/advisories/GHSA-848j-6mx2-7j84',
+194 silly audit report       title: 'Elliptic Uses a Cryptographic Primitive with a Risky Implementation',
+194 silly audit report       severity: 'low',
+194 silly audit report       vulnerable_versions: '<=6.6.1',
+194 silly audit report       cwe: [Array],
+194 silly audit report       cvss: [Object]
+194 silly audit report     }
+194 silly audit report   ],
+194 silly audit report   ws: [
+194 silly audit report     {
+194 silly audit report       id: 1119108,
+194 silly audit report       url: 'https://github.com/advisories/GHSA-58qx-3vcg-4xpx',
+194 silly audit report       title: 'ws: Uninitialized memory disclosure',
+194 silly audit report       severity: 'moderate',
+194 silly audit report       vulnerable_versions: '>=8.0.0 <8.20.1',
+194 silly audit report       cwe: [Array],
+194 silly audit report       cvss: [Object]
+194 silly audit report     },
+194 silly audit report     {
+194 silly audit report       id: 1123259,
+194 silly audit report       url: 'https://github.com/advisories/GHSA-96hv-2xvq-fx4p',
+194 silly audit report       title: 'ws: Memory exhaustion DoS from tiny fragments and data chunks',
+194 silly audit report       severity: 'high',
+194 silly audit report       vulnerable_versions: '>=8.0.0 <8.21.0',
+194 silly audit report       cwe: [Array],
+194 silly audit report       cvss: [Object]
+194 silly audit report     }
+194 silly audit report   ]
+194 silly audit report }
+195 silly packumentCache corgi:https://registry.npmjs.org/elliptic cache-hit
+196 silly packumentCache corgi:https://registry.npmjs.org/ws cache-hit
+197 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fsigning-key cache-hit
+198 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fproviders cache-hit
+199 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fhdnode cache-hit
+200 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2ftransactions cache-hit
+201 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fwallet cache-hit
+202 silly packumentCache corgi:https://registry.npmjs.org/ethers cache-hit
+203 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fjson-wallets cache-hit
+204 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fabstract-provider cache-hit
+205 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fcontracts cache-hit
+206 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fabstract-signer cache-hit
+207 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fhash cache-hit
+208 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fabi cache-hit
+209 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fwordlists cache-hit
+210 verbose cwd /home/meechain
+211 verbose os Linux 6.8.0-1063-azure
+212 verbose node v20.20.2
+213 verbose npm  v10.8.2
+214 verbose exit 1
+215 verbose code 1

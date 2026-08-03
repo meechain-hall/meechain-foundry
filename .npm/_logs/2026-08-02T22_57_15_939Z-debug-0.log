@@ -1,0 +1,173 @@
+0 verbose cli /usr/bin/node /usr/bin/npm
+1 info using npm@10.8.2
+2 info using node@v20.20.2
+3 silly config load:file:/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/meechain/.npmrc
+5 silly config load:file:/usr/etc/npmrc
+6 verbose title npm install cors
+7 verbose argv "install" "cors"
+8 verbose logfile logs-max:10 dir:/home/meechain/.npm/_logs/2026-08-02T22_57_15_939Z-
+9 verbose logfile /home/meechain/.npm/_logs/2026-08-02T22_57_15_939Z-debug-0.log
+10 silly packumentCache heap:480247808 maxSize:120061952 maxEntrySize:60030976
+11 silly logfile done cleaning log files
+12 silly idealTree buildDeps
+13 silly fetch manifest cors@*
+14 silly packumentCache full:https://registry.npmjs.org/cors cache-miss
+15 http fetch GET 200 https://registry.npmjs.org/cors 116ms (cache miss)
+16 silly packumentCache full:https://registry.npmjs.org/cors set size:undefined disposed:false
+17 silly placeDep ROOT cors@2.8.6 OK for: meechain@1.0.0 want: *
+18 silly fetch manifest object-assign@^4
+19 silly packumentCache full:https://registry.npmjs.org/object-assign cache-miss
+20 http fetch GET 200 https://registry.npmjs.org/object-assign 26ms (cache miss)
+21 silly packumentCache full:https://registry.npmjs.org/object-assign set size:undefined disposed:false
+22 silly fetch manifest vary@^1
+23 silly packumentCache full:https://registry.npmjs.org/vary cache-miss
+24 http fetch GET 200 https://registry.npmjs.org/vary 25ms (cache miss)
+25 silly packumentCache full:https://registry.npmjs.org/vary set size:undefined disposed:false
+26 silly placeDep ROOT object-assign@4.1.1 OK for: cors@2.8.6 want: ^4
+27 silly placeDep ROOT vary@1.1.2 OK for: cors@2.8.6 want: ^1
+28 silly reify moves {}
+29 silly audit bulk request {
+29 silly audit   '@ethersproject/abi': [ '5.8.0' ],
+29 silly audit   '@ethersproject/abstract-provider': [ '5.8.0' ],
+29 silly audit   '@ethersproject/abstract-signer': [ '5.8.0' ],
+29 silly audit   '@ethersproject/address': [ '5.8.0' ],
+29 silly audit   '@ethersproject/base64': [ '5.8.0' ],
+29 silly audit   '@ethersproject/basex': [ '5.8.0' ],
+29 silly audit   '@ethersproject/bignumber': [ '5.8.0' ],
+29 silly audit   '@ethersproject/bytes': [ '5.8.0' ],
+29 silly audit   '@ethersproject/constants': [ '5.8.0' ],
+29 silly audit   '@ethersproject/contracts': [ '5.8.0' ],
+29 silly audit   '@ethersproject/hash': [ '5.8.0' ],
+29 silly audit   '@ethersproject/hdnode': [ '5.8.0' ],
+29 silly audit   '@ethersproject/json-wallets': [ '5.8.0' ],
+29 silly audit   '@ethersproject/keccak256': [ '5.8.0' ],
+29 silly audit   '@ethersproject/logger': [ '5.8.0' ],
+29 silly audit   '@ethersproject/networks': [ '5.8.0' ],
+29 silly audit   '@ethersproject/pbkdf2': [ '5.8.0' ],
+29 silly audit   '@ethersproject/properties': [ '5.8.0' ],
+29 silly audit   '@ethersproject/providers': [ '5.8.0' ],
+29 silly audit   '@ethersproject/random': [ '5.8.0' ],
+29 silly audit   '@ethersproject/rlp': [ '5.8.0' ],
+29 silly audit   '@ethersproject/sha2': [ '5.8.0' ],
+29 silly audit   '@ethersproject/signing-key': [ '5.8.0' ],
+29 silly audit   '@ethersproject/solidity': [ '5.8.0' ],
+29 silly audit   '@ethersproject/strings': [ '5.8.0' ],
+29 silly audit   '@ethersproject/transactions': [ '5.8.0' ],
+29 silly audit   '@ethersproject/units': [ '5.8.0' ],
+29 silly audit   '@ethersproject/wallet': [ '5.8.0' ],
+29 silly audit   '@ethersproject/web': [ '5.8.0' ],
+29 silly audit   '@ethersproject/wordlists': [ '5.8.0' ],
+29 silly audit   'aes-js': [ '3.0.0' ],
+29 silly audit   bech32: [ '1.1.4' ],
+29 silly audit   'bn.js': [ '5.2.5', '4.12.5' ],
+29 silly audit   brorand: [ '1.1.0' ],
+29 silly audit   elliptic: [ '6.6.1' ],
+29 silly audit   ethers: [ '5.8.0' ],
+29 silly audit   'hash.js': [ '1.1.7' ],
+29 silly audit   'hmac-drbg': [ '1.0.1' ],
+29 silly audit   inherits: [ '2.0.4' ],
+29 silly audit   'js-sha3': [ '0.8.0' ],
+29 silly audit   'minimalistic-assert': [ '1.0.1' ],
+29 silly audit   'minimalistic-crypto-utils': [ '1.0.1' ],
+29 silly audit   'node-cron': [ '4.6.0' ],
+29 silly audit   'scrypt-js': [ '3.0.1' ],
+29 silly audit   ws: [ '8.18.0' ],
+29 silly audit   cors: [ '2.8.6' ],
+29 silly audit   'object-assign': [ '4.1.1' ],
+29 silly audit   vary: [ '1.1.2' ]
+29 silly audit }
+30 silly tarball no local data for vary@https://registry.npmjs.org/vary/-/vary-1.1.2.tgz. Extracting by manifest.
+31 silly tarball no local data for object-assign@https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz. Extracting by manifest.
+32 silly tarball no local data for cors@https://registry.npmjs.org/cors/-/cors-2.8.6.tgz. Extracting by manifest.
+33 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 35ms
+34 silly audit report {
+34 silly audit report   elliptic: [
+34 silly audit report     {
+34 silly audit report       id: 1112030,
+34 silly audit report       url: 'https://github.com/advisories/GHSA-848j-6mx2-7j84',
+34 silly audit report       title: 'Elliptic Uses a Cryptographic Primitive with a Risky Implementation',
+34 silly audit report       severity: 'low',
+34 silly audit report       vulnerable_versions: '<=6.6.1',
+34 silly audit report       cwe: [Array],
+34 silly audit report       cvss: [Object]
+34 silly audit report     }
+34 silly audit report   ],
+34 silly audit report   ws: [
+34 silly audit report     {
+34 silly audit report       id: 1119108,
+34 silly audit report       url: 'https://github.com/advisories/GHSA-58qx-3vcg-4xpx',
+34 silly audit report       title: 'ws: Uninitialized memory disclosure',
+34 silly audit report       severity: 'moderate',
+34 silly audit report       vulnerable_versions: '>=8.0.0 <8.20.1',
+34 silly audit report       cwe: [Array],
+34 silly audit report       cvss: [Object]
+34 silly audit report     },
+34 silly audit report     {
+34 silly audit report       id: 1123259,
+34 silly audit report       url: 'https://github.com/advisories/GHSA-96hv-2xvq-fx4p',
+34 silly audit report       title: 'ws: Memory exhaustion DoS from tiny fragments and data chunks',
+34 silly audit report       severity: 'high',
+34 silly audit report       vulnerable_versions: '>=8.0.0 <8.21.0',
+34 silly audit report       cwe: [Array],
+34 silly audit report       cvss: [Object]
+34 silly audit report     }
+34 silly audit report   ]
+34 silly audit report }
+35 silly packumentCache corgi:https://registry.npmjs.org/elliptic cache-miss
+36 silly packumentCache corgi:https://registry.npmjs.org/ws cache-miss
+37 http fetch GET 200 https://registry.npmjs.org/elliptic 8ms (cache hit)
+38 silly packumentCache corgi:https://registry.npmjs.org/elliptic set size:67039 disposed:false
+39 http fetch GET 200 https://registry.npmjs.org/ws 16ms (cache hit)
+40 silly packumentCache corgi:https://registry.npmjs.org/ws set size:205716 disposed:false
+41 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fsigning-key cache-miss
+42 http fetch GET 200 https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz 67ms (cache miss)
+43 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fsigning-key 18ms (cache hit)
+44 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fsigning-key set size:74077 disposed:false
+45 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fproviders cache-miss
+46 http fetch GET 200 https://registry.npmjs.org/vary/-/vary-1.1.2.tgz 70ms (cache miss)
+47 http fetch GET 200 https://registry.npmjs.org/cors/-/cors-2.8.6.tgz 69ms (cache miss)
+48 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fproviders 44ms (cache hit)
+49 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fproviders set size:250323 disposed:false
+50 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fhdnode cache-miss
+51 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2ftransactions cache-miss
+52 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fwallet cache-miss
+53 silly packumentCache corgi:https://registry.npmjs.org/ethers cache-miss
+54 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fwallet 8ms (cache hit)
+55 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fwallet set size:113819 disposed:false
+56 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2ftransactions 11ms (cache hit)
+57 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2ftransactions set size:85329 disposed:false
+58 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fhdnode 12ms (cache hit)
+59 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fhdnode set size:89660 disposed:false
+60 http fetch GET 200 https://registry.npmjs.org/ethers 14ms (cache hit)
+61 silly packumentCache corgi:https://registry.npmjs.org/ethers set size:695380 disposed:false
+62 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fabstract-provider cache-miss
+63 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fcontracts cache-miss
+64 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fjson-wallets cache-miss
+65 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fabstract-provider 22ms (cache hit)
+66 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fabstract-provider set size:86707 disposed:false
+67 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fcontracts 22ms (cache hit)
+68 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fcontracts set size:121518 disposed:false
+69 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fjson-wallets 23ms (cache hit)
+70 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fjson-wallets set size:84294 disposed:false
+71 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fabstract-signer cache-miss
+72 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fabstract-signer 16ms (cache hit)
+73 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fabstract-signer set size:92575 disposed:false
+74 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fhash cache-miss
+75 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fhash 9ms (cache hit)
+76 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fhash set size:81868 disposed:false
+77 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fabi cache-miss
+78 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fwordlists cache-miss
+79 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fabi 8ms (cache hit)
+80 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fabi set size:136312 disposed:false
+81 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fwordlists 8ms (cache hit)
+82 silly packumentCache corgi:https://registry.npmjs.org/@ethersproject%2fwordlists set size:73791 disposed:false
+83 silly ADD node_modules/vary
+84 silly ADD node_modules/object-assign
+85 silly ADD node_modules/cors
+86 verbose cwd /home/meechain
+87 verbose os Linux 6.8.0-1063-azure
+88 verbose node v20.20.2
+89 verbose npm  v10.8.2
+90 verbose exit 0
+91 info ok

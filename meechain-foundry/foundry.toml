@@ -1,0 +1,22 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+test = "test"
+remappings = []
+
+# Optimization
+optimizer = true
+optimizer_runs = 200
+
+# RPC settings
+[rpc]
+localhost = "http://127.0.0.1:8545"
+meechain = "http://127.0.0.1:8545"
+
+# Network profiles
+[profile.anvil]
+optimizer_runs = 200
+
+[profile.production]
+optimizer_runs = 1000

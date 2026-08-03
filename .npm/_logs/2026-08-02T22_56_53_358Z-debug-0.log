@@ -1,0 +1,31 @@
+0 verbose cli /usr/bin/node /usr/bin/npm
+1 info using npm@10.8.2
+2 info using node@v20.20.2
+3 silly config load:file:/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/meechain/.npmrc
+5 silly config load:file:/usr/etc/npmrc
+6 verbose title npm install node-cron
+7 verbose argv "install" "node-cron"
+8 verbose logfile logs-max:10 dir:/home/meechain/.npm/_logs/2026-08-02T22_56_53_358Z-
+9 verbose logfile /home/meechain/.npm/_logs/2026-08-02T22_56_53_358Z-debug-0.log
+10 silly packumentCache heap:480247808 maxSize:120061952 maxEntrySize:60030976
+11 silly logfile done cleaning log files
+12 silly idealTree buildDeps
+13 silly fetch manifest node-cron@*
+14 silly packumentCache full:https://registry.npmjs.org/node-cron cache-miss
+15 http fetch GET 200 https://registry.npmjs.org/node-cron 115ms (cache miss)
+16 silly packumentCache full:https://registry.npmjs.org/node-cron set size:undefined disposed:false
+17 silly placeDep ROOT node-cron@4.6.0 OK for: meechain@1.0.0 want: *
+18 silly reify moves {}
+19 silly audit bulk request { 'node-cron': [ '4.6.0' ] }
+20 silly tarball no local data for node-cron@https://registry.npmjs.org/node-cron/-/node-cron-4.6.0.tgz. Extracting by manifest.
+21 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 34ms
+22 silly audit report {}
+23 http fetch GET 200 https://registry.npmjs.org/node-cron/-/node-cron-4.6.0.tgz 82ms (cache miss)
+24 silly ADD node_modules/node-cron
+25 verbose cwd /home/meechain
+26 verbose os Linux 6.8.0-1063-azure
+27 verbose node v20.20.2
+28 verbose npm  v10.8.2
+29 verbose exit 0
+30 info ok

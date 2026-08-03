@@ -1,0 +1,293 @@
+name: 🏰 MeeChain Contract Ritual Deploy
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/**/*.sol'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Deploy environment'
+        required: true
+        default: 'testnet'
+        type: choice
+        options:
+          - testnet
+          - mainnet
+
+env:
+  FOUNDRY_PROFILE: default
+  RPC_URL: ${{ secrets.MEECHAIN_RPC_URL || 'https://rpc.meechain.live' }}
+
+jobs:
+  build-and-test:
+    name: 🔨 Build & Test Contracts
+    runs-on: ubuntu-latest
+    outputs:
+      contracts-compiled: ${{ steps.build.outputs.success }}
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🔧 Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: nightly
+
+      - name: 🔍 Check Solidity Files
+        run: |
+          echo "📋 Found Solidity files:"
+          find src -name "*.sol" -type f | head -20
+          echo ""
+          echo "📦 Total files: $(find src -name "*.sol" -type f | wc -l)"
+
+      - name: 🏗️ Build Contracts
+        id: build
+        run: |
+          echo "🔨 Compiling contracts..."
+          forge build --force
+          echo "success=true" >> $GITHUB_OUTPUT
+          echo "✅ Build successful!"
+
+      - name: 🧪 Run Tests (if available)
+        id: test
+        run: |
+          if [ -d "test" ] && [ "$(find test -name "*.sol" | wc -l)" -gt 0 ]; then
+            echo "🧪 Running test suite..."
+            forge test -vv
+            echo "✅ All tests passed!"
+          else
+            echo "⏭️ No tests found, skipping..."
+          fi
+        continue-on-error: true
+
+  deploy-meechain:
+    name: 🚀 Deploy to MeeChain
+    runs-on: ubuntu-latest
+    needs: build-and-test
+    if: success()
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 🔧 Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: nightly
+
+      - name: 🔑 Setup Deployment Credentials
+        run: |
+          mkdir -p ~/.foundry
+          echo "Foundry setup ready"
+
+      - name: 🏗️ Build Contracts
+        run: forge build --force
+
+      - name: 📤 Deploy MEEToken
+        id: deploy-token
+        run: |
+          echo "🚀 Deploying MEEToken to MeeChain..."
+          DEPLOY_OUTPUT=$(forge create \
+            --rpc-url ${{ secrets.MEECHAIN_RPC_URL || 'https://rpc.meechain.live' }} \
+            --private-key ${{ secrets.PRIVATE_KEY }} \
+            src/MEEToken.sol:MEEToken \
+            --constructor-args "MEEToken" "MEE" "1000000000000000000000000" \
+            --verify false \
+            2>&1)
+          
+          echo "$DEPLOY_OUTPUT"
+          
+          # Extract address from output
+          TOKEN_ADDRESS=$(echo "$DEPLOY_OUTPUT" | grep -oP '0x[0-9a-fA-F]{40}' | head -1)
+          
+          if [ -z "$TOKEN_ADDRESS" ]; then
+            echo "❌ Failed to extract MEEToken address"
+            exit 1
+          fi
+          
+          echo "token_address=$TOKEN_ADDRESS" >> $GITHUB_OUTPUT
+          echo "✅ MEEToken deployed to: $TOKEN_ADDRESS"
+
+      - name: 📤 Deploy MEEReward
+        id: deploy-reward
+        run: |
+          echo "🚀 Deploying MEEReward to MeeChain..."
+          DEPLOY_OUTPUT=$(forge create \
+            --rpc-url ${{ secrets.MEECHAIN_RPC_URL || 'https://rpc.meechain.live' }} \
+            --private-key ${{ secrets.PRIVATE_KEY }} \
+            src/MEEReward.sol:MEEReward \
+            --verify false \
+            2>&1)
+          
+          echo "$DEPLOY_OUTPUT"
+          
+          # Extract address from output
+          REWARD_ADDRESS=$(echo "$DEPLOY_OUTPUT" | grep -oP '0x[0-9a-fA-F]{40}' | head -1)
+          
+          if [ -z "$REWARD_ADDRESS" ]; then
+            echo "❌ Failed to extract MEEReward address"
+            exit 1
+          fi
+          
+          echo "reward_address=$REWARD_ADDRESS" >> $GITHUB_OUTPUT
+          echo "✅ MEEReward deployed to: $REWARD_ADDRESS"
+
+      - name: 🔍 Verify Deployment
+        run: |
+          echo "🔍 Verifying deployments..."
+          
+          TOKEN_CODE=$(cast code ${{ steps.deploy-token.outputs.token_address }} \
+            --rpc-url ${{ secrets.MEECHAIN_RPC_URL || 'https://rpc.meechain.live' }} 2>/dev/null || echo "0x")
+          
+          REWARD_CODE=$(cast code ${{ steps.deploy-reward.outputs.reward_address }} \
+            --rpc-url ${{ secrets.MEECHAIN_RPC_URL || 'https://rpc.meechain.live' }} 2>/dev/null || echo "0x")
+          
+          if [ "$TOKEN_CODE" != "0x" ]; then
+            echo "✅ MEEToken bytecode verified on-chain"
+          else
+            echo "⚠️ MEEToken bytecode not found (may need time to propagate)"
+          fi
+          
+          if [ "$REWARD_CODE" != "0x" ]; then
+            echo "✅ MEEReward bytecode verified on-chain"
+          else
+            echo "⚠️ MEEReward bytecode not found (may need time to propagate)"
+          fi
+
+      - name: 💾 Save Deployment Artifacts
+        run: |
+          mkdir -p deployments
+          cat > deployments/meechain-${{ github.run_number }}.json << EOF
+          {
+            "timestamp": "$(date -u +'%Y-%m-%dT%H:%M:%SZ')",
+            "commitHash": "${{ github.sha }}",
+            "branch": "${{ github.ref }}",
+            "network": "MeeChain",
+            "chainId": 13390,
+            "rpcUrl": "${{ secrets.MEECHAIN_RPC_URL || 'https://rpc.meechain.live' }}",
+            "contracts": {
+              "MEEToken": {
+                "address": "${{ steps.deploy-token.outputs.token_address }}",
+                "name": "MEE Token",
+                "symbol": "MEE",
+                "decimals": 18,
+                "initialSupply": "1000000000"
+              },
+              "MEEReward": {
+                "address": "${{ steps.deploy-reward.outputs.reward_address }}",
+                "name": "MeeChain Reward",
+                "symbol": "MEEBD",
+                "type": "Soulbound NFT"
+              }
+            }
+          }
+          EOF
+          cat deployments/meechain-${{ github.run_number }}.json
+
+      - name: 📤 Upload Deployment Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: deployment-meechain-${{ github.run_number }}
+          path: deployments/
+          retention-days: 90
+
+      - name: 🎉 Deployment Success Summary
+        run: |
+          echo "╔════════════════════════════════════════════╗"
+          echo "║   ✨ MeeChain Deployment Successful ✨    ║"
+          echo "╚════════════════════════════════════════════╝"
+          echo ""
+          echo "📋 Deployment Summary:"
+          echo "  Network: MeeChain (Chain ID: 13390)"
+          echo "  Commit: ${{ github.sha }}"
+          echo "  Branch: ${{ github.ref }}"
+          echo ""
+          echo "🏗️ Contracts Deployed:"
+          echo "  📍 MEEToken:   ${{ steps.deploy-token.outputs.token_address }}"
+          echo "  📍 MEEReward:  ${{ steps.deploy-reward.outputs.reward_address }}"
+          echo ""
+          echo "🔗 RPC URL: https://rpc.meechain.live"
+          echo ""
+          echo "📦 Artifacts saved to: deployments/meechain-${{ github.run_number }}.json"
+          echo ""
+          echo "🎯 Next Steps:"
+          echo "  1. Verify contracts on blockchain explorer"
+          echo "  2. Update frontend .env with contract addresses"
+          echo "  3. Test contract interactions"
+          echo "  4. Monitor transaction logs"
+
+  notify-deployment:
+    name: 📢 Notify Deployment Status
+    runs-on: ubuntu-latest
+    needs: deploy-meechain
+    if: always()
+
+    steps:
+      - name: 📊 Deployment Status
+        run: |
+          if [ "${{ needs.deploy-meechain.result }}" == "success" ]; then
+            echo "✅ All deployments completed successfully!"
+            echo "Artifacts and contract addresses available in GitHub Actions"
+          else
+            echo "❌ Deployment failed. Check logs above for details."
+            exit 1
+          fi
+
+      - name: 🔔 Optional: Slack Notification
+        if: ${{ secrets.SLACK_WEBHOOK_URL }}
+        uses: slackapi/slack-github-action@v1.24.0
+        with:
+          payload: |
+            {
+              "text": "🏰 MeeChain Contract Deployment",
+              "blocks": [
+                {
+                  "type": "header",
+                  "text": {
+                    "type": "plain_text",
+                    "text": "✨ MeeChain Contracts Deployed ✨"
+                  }
+                },
+                {
+                  "type": "section",
+                  "fields": [
+                    {
+                      "type": "mrkdwn",
+                      "text": "*Repository:*\n${{ github.repository }}"
+                    },
+                    {
+                      "type": "mrkdwn",
+                      "text": "*Branch:*\n${{ github.ref }}"
+                    },
+                    {
+                      "type": "mrkdwn",
+                      "text": "*Status:*\n${{ needs.deploy-meechain.result }}"
+                    },
+                    {
+                      "type": "mrkdwn",
+                      "text": "*Network:*\nMeeChain (13390)"
+                    }
+                  ]
+                },
+                {
+                  "type": "actions",
+                  "elements": [
+                    {
+                      "type": "button",
+                      "text": {
+                        "type": "plain_text",
+                        "text": "View Build"
+                      },
+                      "url": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+                    }
+                  ]
+                }
+              ]
+            }

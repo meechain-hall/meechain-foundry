@@ -1,0 +1,47 @@
+0 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'start' ]
+1 info using npm@8.5.1
+2 info using node@v12.22.9
+3 timing npm:load:whichnode Completed in 0ms
+4 timing config:load:defaults Completed in 1ms
+5 timing config:load:file:/usr/share/nodejs/npm/npmrc Completed in 6ms
+6 timing config:load:builtin Completed in 6ms
+7 timing config:load:cli Completed in 4ms
+8 timing config:load:env Completed in 0ms
+9 timing config:load:project Completed in 2ms
+10 timing config:load:file:/home/meechain/.npmrc Completed in 0ms
+11 timing config:load:user Completed in 0ms
+12 timing config:load:file:/etc/npmrc Completed in 0ms
+13 timing config:load:global Completed in 0ms
+14 timing config:load:validate Completed in 1ms
+15 timing config:load:credentials Completed in 5ms
+16 timing config:load:setEnvs Completed in 0ms
+17 timing config:load Completed in 20ms
+18 timing npm:load:configload Completed in 20ms
+19 timing npm:load:setTitle Completed in 0ms
+20 timing config:load:flatten Completed in 2ms
+21 timing npm:load:display Completed in 4ms
+22 verbose logfile /home/meechain/.npm/_logs/2026-08-02T22_37_37_126Z-debug-0.log
+23 timing npm:load:logFile Completed in 5ms
+24 timing npm:load:timers Completed in 0ms
+25 timing npm:load:configScope Completed in 0ms
+26 timing npm:load Completed in 30ms
+27 timing command:run-script Completed in 2ms
+28 timing command:start Completed in 6ms
+29 verbose stack Error: ENOENT: no such file or directory, open '/home/meechain/package.json'
+30 verbose cwd /home/meechain
+31 verbose Linux 6.8.0-1063-azure
+32 verbose argv "/usr/bin/node" "/usr/bin/npm" "start"
+33 verbose node v12.22.9
+34 verbose npm  v8.5.1
+35 error code ENOENT
+36 error syscall open
+37 error path /home/meechain/package.json
+38 error errno -2
+39 error enoent ENOENT: no such file or directory, open '/home/meechain/package.json'
+40 error enoent This is related to npm not being able to find a file.
+40 error enoent
+41 verbose exit -2
+42 timing npm Completed in 247ms
+43 verbose code -2
+44 error A complete log of this run can be found in:
+44 error     /home/meechain/.npm/_logs/2026-08-02T22_37_37_126Z-debug-0.log
