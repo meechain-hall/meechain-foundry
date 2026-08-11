@@ -1,0 +1,2 @@
+.foundry/bin/forge filter=lfs diff=lfs merge=lfs -text
+.foundry/bin/cast filter=lfs diff=lfs merge=lfs -text
